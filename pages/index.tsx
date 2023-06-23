@@ -28,18 +28,20 @@ export const getServerSideProps: GetServerSideProps<{
 
 export default function Home({ bookCategories }: MyPageProps) {
   return (
-    <main>
+    <main className={styles.main}>
       <Seo title="Home" />
       {!bookCategories ? (
         <h4>Loading...</h4>
       ) : (
         bookCategories?.map((category: IBookCategory) => (
-          <Link
-            href={`/list/${category.list_name_encoded}`}
-            key={category.list_name_encoded}
-          >
-            <div>{category.list_name}</div>
-          </Link>
+          <button className="lined thick">
+            <Link
+              href={`/list/${category.list_name_encoded}`}
+              key={category.list_name_encoded}
+            >
+              {category.list_name + " →"}
+            </Link>
+          </button>
         ))
       )}
     </main>
