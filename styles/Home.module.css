@@ -1,8 +1,19 @@
 .main {
   display: flex;
   margin: 0 auto;
-  flex-wrap: wrap;
+  padding: 20px 30px;
+  flex-direction: column;
   width: 80%;
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.home_title {
+  margin: 10px 0px;
+  padding-left: 10px;
+  font-size: 50px;
+}
+
+.home_content {
+  flex-wrap: wrap;
 }

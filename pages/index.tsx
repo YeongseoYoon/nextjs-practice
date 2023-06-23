@@ -30,20 +30,25 @@ export default function Home({ bookCategories }: MyPageProps) {
   return (
     <main className={styles.main}>
       <Seo title="Home" />
-      {!bookCategories ? (
-        <h4>Loading...</h4>
-      ) : (
-        bookCategories?.map((category: IBookCategory) => (
-          <button className="lined thick" key={category.list_name_encoded}>
-            <Link
-              href={`/list/${category.list_name_encoded}`}
-              key={category.list_name_encoded}
-            >
-              {category.list_name + " →"}
-            </Link>
-          </button>
-        ))
-      )}
+      <h1 className={styles.home_title}>
+        The New York Times Best Seller Explorer
+      </h1>
+      <div className={styles.home_content}>
+        {!bookCategories ? (
+          <h4>Loading...</h4>
+        ) : (
+          bookCategories?.map((category: IBookCategory) => (
+            <button className="lined thick" key={category.list_name_encoded}>
+              <Link
+                href={`/list/${category.list_name_encoded}`}
+                key={category.list_name_encoded}
+              >
+                {category.list_name + " →"}
+              </Link>
+            </button>
+          ))
+        )}
+      </div>
     </main>
   );
 }

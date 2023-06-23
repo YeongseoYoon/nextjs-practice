@@ -34,7 +34,7 @@ export default function DetailPage({ bookList }: DetailPageProps) {
         <h4>Loading...</h4>
       ) : (
         bookList?.books.map((book: IBook) => (
-          <div key={`${book.isbns[0].isbn10}-${book.isbns[0].isbn13}`}>
+          <div key={`${book.amazon_product_url}-${book.primary_isbn13}`}>
             <h4>{book.title}</h4>
           </div>
         ))
