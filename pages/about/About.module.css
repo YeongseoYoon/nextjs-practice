@@ -1,0 +1,20 @@
+.main {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 5px 6px 8px -4px rgba(0, 0, 0, 0.4),
+    -6px 4px 8px -4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+.about_title {
+  font-size: 40px;
+}
+
+.about_text {
+  margin: 10px 0px;
+  font-size: 20px;
+}

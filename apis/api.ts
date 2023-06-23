@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export async function getBookCategories<IBookCategoryResponse>() {
+export async function getBookCategories() {
   try {
     const data = await (
       await fetch("https://books-api.nomadcoders.workers.dev/lists")
@@ -12,7 +12,7 @@ export async function getBookCategories<IBookCategoryResponse>() {
   }
 }
 
-export async function getBooks<IBookResponse>(bookCategory: string) {
+export async function getBooks(bookCategory: string) {
   try {
     const data = await (
       await fetch(

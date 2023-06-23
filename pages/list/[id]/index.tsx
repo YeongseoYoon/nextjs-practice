@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
 import Seo from "../../../components/seo/Seo";
 import { getBooks } from "../../../apis/api";
