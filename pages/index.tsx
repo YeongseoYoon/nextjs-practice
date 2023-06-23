@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GetServerSideProps } from "next";
-import Seo from "../components/Seo";
+import Seo from "../components/seo/Seo";
 import { getBookCategories } from "../apis/api";
 import { IBookCategory } from "@/types/types";
 

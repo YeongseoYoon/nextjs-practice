@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
-import Seo from "../../../components/Seo";
+import Seo from "../../../components/seo/Seo";
 import { getBooks } from "../../../apis/api";
 import { IBook, IBookResponse } from "@/types/types";
 
