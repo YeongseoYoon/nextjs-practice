@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
-import Seo from "../../components/Seo";
-import { getBooks } from "../../apis/api";
+import Seo from "../../../components/Seo";
+import { getBooks } from "../../../apis/api";
 import { IBook, IBookResponse } from "@/types/types";
 
 interface DetailPageProps {
@@ -28,12 +28,9 @@ export const getServerSideProps: GetServerSideProps<DetailPageProps> = async ({
 };
 
 export default function DetailPage({ bookList }: DetailPageProps) {
-  const router = useRouter();
-  const { id } = router.query;
-
   return (
     <div>
-      <Seo title={`Detail - ${id}`} />
+      <Seo title={`Detail - ${bookList.list_name}`} />
       {!bookList ? (
         <h4>Loading...</h4>
       ) : (

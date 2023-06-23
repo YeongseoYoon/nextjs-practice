@@ -34,7 +34,7 @@ export default function Home({ bookCategories }: MyPageProps) {
         <h4>Loading...</h4>
       ) : (
         bookCategories?.map((category: IBookCategory) => (
-          <button className="lined thick">
+          <button className="lined thick" key={category.list_name_encoded}>
             <Link
               href={`/list/${category.list_name_encoded}`}
               key={category.list_name_encoded}
